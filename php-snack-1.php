@@ -4,24 +4,24 @@
 // Olimpia Milano - Cantù | 55-60
 
 $partite = [
-    'girone_1' => [
+    'Primo girone' => [
         [
-            $squadra = 'Olimpia Milano',
-            $punteggio = 55
+            'squadra' => 'Olimpia Milano',
+            'punteggio' => 55
         ],
         [
-            $squadra = 'Cantù',
-            $punteggio = 60
+            'squadra' => 'Cantù',
+            'punteggio' => 60
         ]
     ],
-    'girone_2' => [
+    'Secondo girone' => [
         [
-            $squadra = 'Olimpia Milano',
-            $punteggio = 50
+            'squadra' => 'Olimpia Milano',
+            'punteggio' => 50
         ],
         [
-            $squadra = 'Torino',
-            $punteggio = 45
+            'squadra' => 'Torino',
+            'punteggio' => 45
         ]
     ]
 ];
@@ -40,13 +40,9 @@ $partite = [
 </head>
 <body>
     <h2>Risultato gironi:</h2>
-    <h3>Primo girone</h3>
-    <p>
-        <?php echo $partite["girone_1"][0][0]." - ".$partite["girone_1"][1][0]." | ".$partite["girone_1"][0][1]." - ".$partite["girone_1"][1][1]; ?>
-    </p>
-    <h3>Secondo girone</h3>
-    <p>
-        <?php echo $partite["girone_2"][0][0]." - ".$partite["girone_2"][1][0]." | ".$partite["girone_2"][0][1]." - ".$partite["girone_2"][1][1]; ?>
-    </p>
+    <?php foreach($partite as $key => $v) {?>
+        <h3><?php echo $key; ?></h3>
+        <p><?php echo $v[0]['squadra']." - ".$v[1]['squadra']. " | ".$v[0]['punteggio']." - ".$v[1]['punteggio']; ?></p>
+        <?php } ?>
 </body>
 </html>
