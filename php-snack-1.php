@@ -41,10 +41,8 @@ $partite = [
 <body>
     <h2>Risultato gironi:</h2>
     <h3>Primo girone</h3>
-    <p><?php echo $partite["girone_1"][0][0]; ?> <span><?php echo $partite["girone_1"][0][1]; ?></span></p>
-    <p><?php echo $partite["girone_1"][1][0]; ?> <span><?php echo $partite["girone_1"][1][1]; ?></span></p>
+    <p><?php echo $partite["girone_1"][0][0]." - ".$partite["girone_1"][1][0]." | ".$partite["girone_1"][0][1]." - ".$partite["girone_1"][1][1]; ?></p>
     <h3>Secondo girone</h3>
-    <p><?php echo $partite["girone_2"][0][0]; ?> <span><?php echo $partite["girone_2"][0][1]; ?></span></p>
-    <p><?php echo $partite["girone_2"][1][0]; ?> <span><?php echo $partite["girone_2"][1][1]; ?></span></p>
+    <p><?php echo $partite["girone_2"][0][0]." - ".$partite["girone_2"][1][0]." | ".$partite["girone_2"][0][1]." - ".$partite["girone_2"][1][1]; ?></p>
 </body>
 </html>
